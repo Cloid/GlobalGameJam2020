@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 196996175}
   - component: {fileID: 196996174}
   - component: {fileID: 196996179}
+  - component: {fileID: 196996180}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -263,8 +264,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  jumpHeight: 7
+  jumpHeight: 2
   jumps: 100
+  animator: {fileID: 196996180}
 --- !u!58 &196996175
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -341,7 +343,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300006, guid: 545e3f6ad65c48d40a96534d4c3ecd84, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0540eeb6c369e1e499fc90e6880e6bce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -360,7 +362,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196996173}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.9, y: 5.1, z: -2.6601138}
+  m_LocalPosition: {x: -32.9, y: 1, z: -2.6601138}
   m_LocalScale: {x: 0.59706444, y: 0.57046646, z: 0.20034}
   m_Children:
   - {fileID: 1587748234}
@@ -383,7 +385,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 1, y: 1}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
@@ -393,6 +395,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &196996180
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196996173}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e563c88de91343e4984e2531e32e3102, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &348020601
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,7 +645,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.7041037
+  orthographic size: 3.4233263
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

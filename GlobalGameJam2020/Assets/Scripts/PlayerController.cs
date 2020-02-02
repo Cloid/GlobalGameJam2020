@@ -10,6 +10,7 @@ public class PlayerController: MonoBehaviour
     private Rigidbody2D rb2d;        //Store a reference to the Rigidbody2D component required to use 2D Physics.
     public float jumpHeight;
     public float jumps;
+    public Animator animator;
 
     // Use this for initialization
     void Start()
@@ -25,6 +26,7 @@ public class PlayerController: MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            animator.SetBool("isJumping", true);
             if (jumps > 0)
             {
                 rb2d.velocity = Vector2.up * jumpHeight;
